@@ -9,7 +9,7 @@ class ExampleSpec extends FlatSpec with Matchers with ScalaFutures {
 
   def example: Future[Int] = Future.failed(ExampleFail())
 
-  // Two tricks here:
+  // Three tricks here:
   // 1. Using whenReady to await for the future
   // 2. Using .failed to access the failed exception
   // 3. If there's no failure, scalatest will catch NoSuchElement exception from the Future
